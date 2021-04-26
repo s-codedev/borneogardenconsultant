@@ -1,0 +1,324 @@
+:root {
+    --primaryColor: #92a5c6;
+    --infoColor: #3286d5;
+    --successColor: #61ac73;
+    --warningColor: #de9c3b;
+    --dangerColor: #f44336;
+    --textColor: #fff;
+    --textSecondary: #333;
+    --backgroundColor: #fafafa;
+}
+
+@font-face {
+    font-family: 'Playfair Display';
+    src: url('../fonts/Playfair_Display/PlayfairDisplay-VariableFont_wght.ttf') format('truetype');
+    font-family: 'Fira Sans';
+    src: url('../fonts/Fira_Sans/FiraSans-Light.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Fira Sans';
+    src: url('../fonts/Fira_Sans/FiraSans-Light.ttf') format('truetype');
+    font-weight: 100;
+}
+
+@font-face {
+    font-family: 'Fira Sans';
+    src: url('../fonts/Fira_Sans/FiraSans-Medium.ttf') format('truetype');
+    font-weight: 200;
+}
+
+@font-face {
+    font-family: 'Fira Sans';
+    src: url('../fonts/Fira_Sans/FiraSans-Regular.ttf') format('truetype');
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: 'Fira Sans';
+    src: url('../fonts/Fira_Sans/FiraSans-Bold.ttf') format('truetype');
+    font-weight: 500;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--backgroundColor);
+    font-family: 'Fira Sans', sans-serif;
+    font-weight: 200;
+    color: var(--textColor);
+    width: 100%;
+}
+
+
+/* util */
+
+section {
+    padding-top: 6rem;
+}
+
+.sec-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    color: var(--textSecondary);
+    font-weight: 600;
+    filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.9));
+}
+
+.card {
+    border-radius: 20px;
+}
+
+.btn-custom {
+    background-color: var(--infoColor);
+    border: 0;
+    color: var(--textColor);
+    border-radius: 50px;
+    padding: 10px 20px;
+}
+
+
+/* end util */
+
+
+/* navbar */
+
+.navbar {
+    background-color: var(--primaryColor);
+    filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.5));
+}
+
+.navbar-brand {
+    display: inline-block;
+    font-family: 'Playfair Display', serif;
+    font-weight: 800;
+    font-size: 2rem;
+    color: #fafafa !important;
+}
+
+.navbar-brand::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 3px;
+    background: #fafafa;
+    transition: width 0.3s;
+}
+
+.navbar-brand:hover::after {
+    width: 100%;
+    transition: width 0.3s;
+}
+
+.navbar-nav {
+    font-weight: 300;
+}
+
+.navbar .navbar-nav .nav-link {
+    padding-right: 1.2rem;
+    color: #fafafa !important;
+    font-size: 1.1rem;
+}
+
+.navbar .navbar-nav .nav-link::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 3px;
+    background: #fafafa;
+    transition: width 0.3s;
+}
+
+.navbar .navbar-nav .nav-link:hover::after {
+    width: 100%;
+    transition: width 0.3s;
+}
+
+
+/* end nav */
+
+
+/* jumbotron */
+
+.jumbotron {
+    display: block;
+    position: relative;
+    height: 100vh;
+    background: url('../img/jumbotron.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -2;
+    text-align: center;
+}
+
+.jumbotron::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient( 180deg, rgba(98, 98, 98, 0.3) 0%, rgba(0, 0, 0, 0.5) 100%);
+    z-index: -1;
+}
+
+.jumbotron .container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+    justify-content: center !important;
+    align-items: center !important;
+}
+
+.jumbotron .container .display-4 {
+    padding-top: 20rem;
+    font-weight: 100;
+    filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 1));
+}
+
+
+/* end jumbotron */
+
+
+/* about */
+
+.about-us {
+    padding-bottom: 3rem;
+    color: var(--textSecondary);
+}
+
+.about-us .text {
+    display: flex;
+    flex-direction: column;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.about-us .text .text-title {
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+
+.about-us .text .text-content {
+    font-size: 1.4rem;
+    font-weight: 100;
+    text-align: justify;
+}
+
+
+/* end about */
+
+
+/* services */
+
+.services {
+    background-color: var(--successColor);
+    text-align: center;
+    padding-bottom: 3rem;
+}
+
+.services .card-title {
+    color: var(--textSecondary);
+    font-size: 4rem;
+}
+
+.services .card-text {
+    color: var(--textSecondary);
+    font-size: 2rem;
+    padding-bottom: 1rem;
+}
+
+.services .text-body {
+    color: var(--textSecondary);
+    font-weight: 100;
+    padding: 0 1rem;
+}
+
+
+/* end services */
+
+
+/* gallery */
+
+.gallery {
+    padding-bottom: 3rem;
+}
+
+.gallery .card {
+    height: 250px;
+}
+
+.gallery .card img {
+    height: 100%;
+}
+
+
+/* end gallery */
+
+
+/* contact */
+
+.contact-us {
+    padding-bottom: 3rem;
+    background-color: var(--successColor);
+    color: var(--textSecondary);
+}
+
+.contact-us .card-title {
+    font-size: 1.4rem;
+}
+
+.contact-us label {
+    font-weight: 100;
+}
+
+.contact-us .maps {
+    height: 500px;
+    overflow: hidden;
+}
+
+.contact-us .maps iframe {
+    height: 100%;
+}
+
+
+/* end contact */
+
+
+/* footer */
+
+footer {
+    background: var(--primaryColor);
+}
+
+footer .copy {
+    font-weight: 100;
+    font-size: 1.2rem;
+    padding: 20px 0;
+}
+
+footer .copy a {
+    text-decoration: none;
+    color: var(--textColor);
+}
+
+footer .sosmed {
+    font-weight: 100;
+    padding: 20px 0;
+}
+
+footer .sosmed a {
+    text-decoration: none;
+    font-size: 1.4rem;
+    padding-right: 10px;
+    color: var(--textColor);
+}
+
+
+/* end footer */
